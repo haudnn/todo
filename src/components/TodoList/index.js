@@ -10,11 +10,7 @@ export default function TodoList() {
   const [todoName,setTodoName] = useState('')
   const [prioriry,setPriority] = useState('Medium')
   const todoList = useSelector(todoRemainingSelector)
-  // const searchText = useSelector(searchTextSelector)
-
-  // console.log({todoList,searchText} )
   const refTodoName = useRef()
-  console.log(todoList)
   const dispatch = useDispatch()  
   const handleAdd = () => {
     dispatch(addTodo({
@@ -38,6 +34,7 @@ export default function TodoList() {
         {todoList.map(todo => 
           <Todo 
           key={todo.id} 
+          id={todo.id}
           name={todo.name} 
           prioriry={todo.prioriry} 
           completed={todo.completed} />
