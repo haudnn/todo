@@ -5,9 +5,6 @@ export const todoListSelector = (state) => state.todoList
 export const searchTextSelector = (state) => state.filter.search
 export const filterStatusSelector = (state) => state.filter.status
 export const filterPrioritiesSelector = (state) => state.filter.priority
-
-
-
 // reselect 
 // CreateSelector nhận vào 2 đối số là các selector cần dữ liệu của nhau để thưc hiện
 // cụ thể ở đây là todoListSelector và searchTextSelector
